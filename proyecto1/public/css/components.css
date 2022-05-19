@@ -1,0 +1,13 @@
+/*
+ * Component: w-fit-container
+ *
+ * fixes the witdh of a container to the current breakpoint
+ *
+ * */
+
+.w-fit-container{
+
+  /* center horizontally */
+  margin: auto;
+}
+
