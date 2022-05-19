@@ -11,8 +11,8 @@ a{
 }
 
 nav{
-  background-color: #272932;
-  color: #C9C9C9;
+  background-color: var(--nav-bg-color);
+  color: var(--main-text-color);
 
   /* occupy all width */
   width: 100%;
