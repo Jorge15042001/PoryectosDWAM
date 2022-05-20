@@ -27,7 +27,6 @@ nav{
 
 /* TODO: make resizable */
 nav .w-fit-container{
-  width: 1000px;
   height: 100%;
 
   display: flex;
