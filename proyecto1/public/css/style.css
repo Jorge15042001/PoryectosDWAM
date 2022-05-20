@@ -4,6 +4,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html{
+  /* default font size */
+  font-size: 62.5%;
+}
 /* remove defualt links styling */
 a{
   text-decoration: none;
@@ -32,5 +37,6 @@ nav .w-fit-container{
 }
 
 nav .w-fit-container #right-side *{
-  margin: 1rem;
+  margin: 1em;
 }
+
