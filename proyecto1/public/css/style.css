@@ -19,23 +19,48 @@ nav{
   background-color: var(--nav-bg-color);
   color: var(--main-text-color);
 
-  /* occupy all width */
-  width: 100%;
-  height: 70px;
+  height: fit-content;
+  font-size: 2rem;
 }
 
+
+
+/* page CSS */
 
 /* TODO: make resizable */
 nav .w-fit-container{
   height: 100%;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+nav .w-fit-container *{
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
-nav .w-fit-container #right-side *{
-  margin: 1em;
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
 }
 
+nav ul *{
+  margin: auto;
+}
+
+@media (min-width: 800px){
+
+}
+@media (min-width: 770px){
+  nav .w-fit-container{
+    flex-direction: row;
+  }
+  nav ul{
+    width: 50%;
+  }
+}
