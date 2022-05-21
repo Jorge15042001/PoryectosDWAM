@@ -53,9 +53,6 @@ nav ul *{
   margin: auto;
 }
 
-@media (min-width: 800px){
-
-}
 @media (min-width: 770px){
   nav .w-fit-container{
     flex-direction: row;
