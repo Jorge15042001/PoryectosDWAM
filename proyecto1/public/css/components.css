@@ -10,4 +10,33 @@
   /* center horizontally */
   margin: auto;
 }
+@media (min-width: 320px){
+  .w-fit-container{
+    max-width: 320px;
+  }
+}
+@media (min-width: 480px){
+  .w-fit-container{
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 770px){
+  .w-fit-container{
+    max-width: 770px;
+  }
+}
+
+@media (min-width: 1024px){
+  .w-fit-container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1200px){
+  .w-fit-container{
+    max-width: 1200px;
+  }
+}
+
 
