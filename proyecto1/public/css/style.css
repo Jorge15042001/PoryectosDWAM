@@ -23,6 +23,13 @@ nav{
   font-size: 2rem;
 }
 
+section {
+
+  padding-top: 3rem;
+
+}
+
+
 
 
 /* page CSS */
@@ -34,7 +41,9 @@ nav .w-fit-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  
+  /* padding: 0rem 4rem; */
 }
 nav .w-fit-container *{
   margin-top: 0.3em;
@@ -46,11 +55,8 @@ nav ul{
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
-}
-
-nav ul *{
-  margin: auto;
 }
 
 @media (min-width: 770px){
@@ -58,6 +64,17 @@ nav ul *{
     flex-direction: row;
   }
   nav ul{
-    width: 50%;
+    width: 40%;
   }
+}
+
+
+section h2{
+  color: var(--emph-text-color);
+  font-size: 3rem;
+  text-align: center;
+}
+
+#blogposts{
+  margin: 4rem 0rem;
 }
