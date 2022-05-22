@@ -70,11 +70,34 @@ nav ul{
 
 
 section h2{
-  color: var(--emph-text-color);
+  /* color: var(--emph-text-color); */
   font-size: 3rem;
   text-align: center;
+  font-weight: 800;
 }
 
-#blogposts{
-  margin: 4rem 0rem;
+section button{
+  /* coloring */
+  background-color: var(--emph-text-color);
+  color: white;
+  /* decoration */
+  padding:1em 2em;;
+  border-radius: 1em;
+  /* center the button */
+  display: block;
+  margin: auto;
+  /* font */
+  font-size: 2rem;
+  font-weight: 700;
+
 }
+
+
+#blogposts-section{
+  background-color: #eef1f1;
+  padding: 10rem 0rem;
+}
+
+
+
+
