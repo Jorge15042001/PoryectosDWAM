@@ -142,6 +142,13 @@ section button{
 }
 
 
+#newsletter-section{
+  background-color: #eef1f1;
+  padding-bottom: 10rem;
+}
+
+
+
 
 @media (min-width: 770px){
   nav .w-fit-container{

@@ -130,3 +130,82 @@
 
 
 
+/*
+ * Component: form-wrapper
+ *
+ * constains a form and a .form-desciption
+ *
+ * */
+.form-wrapper{
+  font-size: 1.5rem;
+}
+
+.form-wrapper .form-description{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-wrapper form{
+  margin: auto;
+  margin-top: 3rem;
+  background-color: white;
+  padding: 2rem;
+  
+
+  border-radius: 1.0em;
+  box-shadow: 0rem 0rem 1rem 0rem ;
+
+}
+
+.form-wrapper form .form-entry{
+  margin-top: 1em;
+} 
+
+.form-wrapper form input[type="checkbox"] {
+  margin-right: 1em;
+}
+
+.form-wrapper form .email-entry label{
+  display: block;
+
+}
+.form-wrapper form .email-entry input{
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px solid gray;
+  border-radius: 0.3em;
+}
+@media (min-width: 770px ){
+  .form-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .form-wrapper .form-description,
+  .form-wrapper form{
+    margin: 2rem;
+    padding: 1rem;
+    flex: 1 1 0;
+  }
+  .form-wrapper .form-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px ){
+  .form-wrapper .form-description,
+  .form-wrapper form{
+    margin: 5rem;
+    padding: 1rem;
+    flex: 1 1 0;
+  }
+  .form-wrapper .form-description{
+    font-size: 2.3rem;
+
+  }
+  .form-wrapper form .form-entry{
+    font-size: 2rem;
+  }
+
+}
