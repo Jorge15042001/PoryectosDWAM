@@ -59,14 +59,6 @@ nav ul{
 
 }
 
-@media (min-width: 770px){
-  nav .w-fit-container{
-    flex-direction: row;
-  }
-  nav ul{
-    width: 40%;
-  }
-}
 
 
 section h2{
@@ -108,7 +100,7 @@ section button{
 .content-table {
   border-collapse: collapse;
   margin: auto;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -124,12 +116,16 @@ section button{
 
 .content-table th,
 .content-table td {
-  padding: 12px 15px;
+  padding: 1rem 1.5rem;
 }
 
 .content-table tbody tr {
   border-bottom: 1px solid #dddddd;
   color: var(--not-important-color);
+}
+.content-table td a{
+  /* color: black; */
+  font-weight: bold;
 }
 
 .content-table tbody tr:nth-of-type(even) {
@@ -147,3 +143,14 @@ section button{
 
 
 
+@media (min-width: 770px){
+  nav .w-fit-container{
+    flex-direction: row;
+  }
+  nav ul{
+    width: 40%;
+  }
+  .content-table{
+    font-size: 1.8rem;
+  }
+}
