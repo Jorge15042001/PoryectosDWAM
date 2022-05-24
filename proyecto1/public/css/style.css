@@ -24,11 +24,14 @@ nav{
 }
 
 section {
-
   padding-top: 3rem;
+  padding-bottom: 10rem;
 
 }
 
+section:nth-child(odd){
+  background-color: #eef1f1;
+}
 
 
 
@@ -86,13 +89,41 @@ section button{
 
 }
 
+/* first section */
 
-#blogposts-section{
-  background-color: #eef1f1;
-  padding-bottom: 10rem;
+.split{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
 }
 
+.split p,
+.split .video-wrapper{
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: justify;
+  margin: 2rem;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  
 
+}
+.split .video-wrapper{
+  /* position: relative; */
+  /* padding-top: 56.25%; */
+  width: 100%;
+  height:max-content;
+}
+.split .video-wrapper iframe{
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* vertical-align: top; */
+}
 
 
 /* styling table */
@@ -137,17 +168,42 @@ section button{
   border-bottom: 2px solid var(--emph-text-color);
 }
 
-#projects-section{
-  padding-bottom: 10rem;
+
+
+
+
+
+
+
+/* footer */
+footer{
+  background-color: var(--nav-bg-color);
+  height: 30rem;
+  color: white;
+}
+footer h2{
+  padding: 2rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
-
-#newsletter-section{
-  background-color: #eef1f1;
-  padding-bottom: 10rem;
+footer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer ul li{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 2rem;
 }
 
-
+footer .logo-footer{
+  height: 4rem;
+}
 
 
 @media (min-width: 770px){
@@ -159,5 +215,17 @@ section button{
   }
   .content-table{
     font-size: 1.8rem;
+  }
+  footer ul{
+    flex-direction: row;
+  }
+  footer{
+    height: 20rem;
+  }
+}
+
+@media(min-width: 1024px){
+  .split {
+    flex-direction: row;
   }
 }
