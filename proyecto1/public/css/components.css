@@ -15,6 +15,11 @@
     max-width: 280px;
   }
 }
+@media (min-width: 400px){
+  .w-fit-container{
+    max-width: 360px;
+  }
+}
 @media (min-width: 480px){
   .w-fit-container{
     max-width: 440px;
