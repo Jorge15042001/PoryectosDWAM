@@ -133,8 +133,54 @@
 }
 
 
+/*
+ * Component: iframe-wrapper
+ *
+ * holds an iframe
+ *
+ * */
+.iframe-wrapper iframe{
+  width: 100%;
+  height: 100%;
+}
 
+@media (min-width: 770px ){
+  .iframe-wrapper{
+    height: 35rem;
+  }
+}
+/*
+ * Component: split-2-columns
+ *
+ * holds 2 flex colums that will dynamically adjust
+ *
+ * */
 
+.split-2-columns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.split-2-columns div:nth-child(1),
+.split-2-columns div:nth-child(2){
+  flex: 1 1 0;
+  margin:2rem;
+}
+
+.column h3{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+@media (min-width: 770px ){
+.split-2-columns{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 /*
  * Component: form-wrapper
  *
@@ -145,10 +191,6 @@
   font-size: 1.5rem;
 }
 
-.form-wrapper .form-description{
-  text-align: center;
-  font-size: 2rem;
-}
 
 .form-wrapper form{
   margin: auto;
@@ -180,23 +222,26 @@
   border: 1px solid gray;
   border-radius: 0.3em;
 }
+
+
+
 @media (min-width: 770px ){
-  .form-wrapper{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+  /* .form-wrapper{ */
+  /*   display: flex; */
+  /*   flex-direction: row; */
+  /*   flex-wrap: nowrap; */
+  /* } */
   .form-wrapper .form-description,
   .form-wrapper form{
     margin: 2rem;
     padding: 1rem;
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
   }
-  .form-wrapper .form-description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  /* .form-wrapper .form-description{ */
+  /*   display: flex; */
+  /*   flex-direction: column; */
+  /*   justify-content: center; */
+  /* } */
 }
 @media (min-width: 1024px ){
   .form-wrapper .form-description,
