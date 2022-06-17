@@ -90,6 +90,10 @@ section button{
 }
 
 /* first section */
+#presentation-text{
+  font-size: 1.4rem;
+  text-align: justify;
+}
 
 /* styling table */
 
@@ -194,5 +198,9 @@ footer .logo-footer{
 @media(min-width: 1024px){
   .split {
     flex-direction: row;
+  }
+
+  #presentation-text{
+    font-size: 2rem;
   }
 }
