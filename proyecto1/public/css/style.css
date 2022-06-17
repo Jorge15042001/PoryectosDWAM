@@ -86,7 +86,11 @@ section button{
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 2rem;
+  transition: all .2s ease-in-out;
 
+}
+section button:hover{
+  transform: scale(1.05);
 }
 
 /* first section */
