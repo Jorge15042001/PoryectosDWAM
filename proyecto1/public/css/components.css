@@ -108,7 +108,8 @@
 }
 
 .card img{
-  object-fit:cover;
+  object-fit: cover;
+  width: 100%;
 }
 .card:hover{
   transform: scale(1.05);
