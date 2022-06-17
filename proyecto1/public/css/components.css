@@ -110,6 +110,11 @@
 .card img{
   object-fit:cover;
 }
+.card:hover{
+  transform: scale(1.05);
+  border: solid 1.5pt var(--emph-color);
+}
+
 /*
  * Component: img-wrapper
  *
