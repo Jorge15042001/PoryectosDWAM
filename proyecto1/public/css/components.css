@@ -84,6 +84,8 @@
   /* flex-direction: column; */
   /* justify-content: space-between; */
   background-color: white;
+  /* set transition for hover  */
+  transition: all .2s ease-in-out;
 }
 
 .card h3{
