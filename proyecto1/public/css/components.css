@@ -259,3 +259,15 @@
   aspect-ratio: 16/9;
 
 }
+/*
+ * Component: vertical-center-text 
+ *
+ * centers text vertically
+ *
+ * */
+
+.vertical-center-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
