@@ -76,13 +76,9 @@
   border-radius: 1.0em;
   box-shadow: 0rem 0rem 1rem 0rem ;
   margin: 2rem;
-  /* background-color: #7699D4; */
 
   overflow: hidden;
 
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
   background-color: white;
   /* set transition for hover  */
   transition: all .2s ease-in-out;
@@ -93,7 +89,6 @@
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  /* color: var(--emph-text-color); */
   padding: 0rem 2rem;
   padding-top: 1rem;
 
