@@ -8,6 +8,7 @@
 html{
   /* default font size */
   font-size: 62.5%;
+  font-family: 'Joan', serif;
 }
 /* remove defualt links styling */
 a{
