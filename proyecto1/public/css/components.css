@@ -117,29 +117,6 @@
 }
 
 /*
- * Component: img-wrapper
- *
- * this is a container that holds an image with 16:9 aspect ratio
- *
- * */
-
-.image-wrapper{ 
-  position: relative;
-
-  width: 100%;
-  padding-top: 56.25%;
-}
-.image-wrapper img{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left: 0;
-  vertical-align:top;
-}
-
-
-/*
  * Component: iframe-wrapper
  *
  * holds an iframe
