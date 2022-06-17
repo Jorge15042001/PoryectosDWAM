@@ -247,3 +247,15 @@
   }
 
 }
+
+
+/*
+ * Component: aspect-ratio_16-9
+ *
+ * makes a container exactly 16:9, the high od the 
+ * element must be set first
+ * */
+.aspect-ratio_16-9{
+  aspect-ratio: 16/9;
+
+}
