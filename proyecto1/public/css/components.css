@@ -144,11 +144,6 @@
   height: 100%;
 }
 
-@media (min-width: 770px ){
-  .iframe-wrapper{
-    height: 35rem;
-  }
-}
 /*
  * Component: split-2-columns
  *
