@@ -137,8 +137,10 @@ section button{
 
 
 
-
-
+/*contact information section*/
+#map{
+  aspect-ratio: 4/3;
+}
 
 /* footer */
 footer{
