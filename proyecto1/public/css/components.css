@@ -226,22 +226,11 @@
 
 
 @media (min-width: 770px ){
-  /* .form-wrapper{ */
-  /*   display: flex; */
-  /*   flex-direction: row; */
-  /*   flex-wrap: nowrap; */
-  /* } */
   .form-wrapper .form-description,
   .form-wrapper form{
     margin: 2rem;
     padding: 1rem;
-    /* flex: 1 1 0; */
   }
-  /* .form-wrapper .form-description{ */
-  /*   display: flex; */
-  /*   flex-direction: column; */
-  /*   justify-content: center; */
-  /* } */
 }
 @media (min-width: 1024px ){
   .form-wrapper .form-description,
