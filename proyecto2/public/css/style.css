@@ -122,5 +122,20 @@ section table th {
 
     padding-left: 1rem;
 
-    padding-right: 1rem
+    padding-right: 1rem;
+
+    border-collapse: collapse;
+
+    border-width: 1px
+}
+
+section a {
+
+    --tw-text-opacity: 1;
+
+    color: rgb(96 165 250 / var(--tw-text-opacity));
+
+    -webkit-text-decoration-line: underline;
+
+            text-decoration-line: underline
 }

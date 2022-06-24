@@ -21,4 +21,9 @@ section table > thead{
 section table td,
 section table th{
   @apply pt-2 pb-2 pl-4 pr-4;
+  @apply border-collapse border;
+}
+
+section a{
+  @apply text-blue-400 underline;
 }
