@@ -3,6 +3,7 @@ const emptyOptionStrig = '<option value="-1">Select cryptocurrency</option>';
 const baseAssetSelect = document.getElementById('baseAssetSelect');
 const quoteAssetSelect = document.getElementById('quoteAssetSelect');
 const resultsTable = document.getElementById('resultsTable');
+const viewOnBinanceLink = document.getElementById('viewOnBinanceLink');
 
 
 fetch('https://api.binance.com/api/v1/exchangeInfo')
@@ -43,7 +44,6 @@ quoteAssetSelect.onchange = ()=>{
   fetch('https://api.binance.com/api/v3/ticker/24hr?symbol='+baseAsset+quoteAsset)
   .then(res=>res.json())
   .then(data => {
-    console.log(resultsTable.getElementsByTagName('tbody')[0])
     const tableBody = resultsTable.getElementsByTagName('tbody')[0];
     tableBody.innerHTML = "";
   
@@ -60,11 +60,14 @@ quoteAssetSelect.onchange = ()=>{
       tableBody.appendChild(row);
 
     }
-    console.log(data);
     appendRow("Open price" ,data.prevClosePrice);
     appendRow("Actaul price" ,data.lastPrice);
     appendRow("Change" ,data.priceChange);
     appendRow("Percentual change" ,data.priceChangePercent);
 
+    viewOnBinanceLink.setAttribute("href", "https://www.binance.com/en/trade/"+baseAsset+"_"+quoteAsset)
+    viewOnBinanceLink.hidden = false;
+
   })
+  .catch(err=>console.error(err));
 }
