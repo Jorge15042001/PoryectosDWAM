@@ -1,0 +1,24 @@
+section{
+  @apply container pt-4 pb-4;
+}
+
+section h1{
+  @apply text-center text-3xl font-bold;
+
+}
+
+section h2{
+  @apply text-center text-xl font-semibold;
+}
+
+section table{
+  @apply border-collapse border;
+}
+section table > thead{
+  @apply bg-gray-100;
+}
+
+section table td,
+section table th{
+  @apply pt-2 pb-2 pl-4 pr-4;
+}

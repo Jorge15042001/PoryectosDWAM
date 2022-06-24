@@ -1,0 +1,126 @@
+section {
+
+    width: 100%;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+    padding-right: 1rem;
+
+    padding-left: 1rem
+}
+
+@media (min-width: 640px) {
+
+    section {
+
+        max-width: 640px;
+
+        padding-right: 1rem;
+
+        padding-left: 1rem
+    }
+}
+
+@media (min-width: 768px) {
+
+    section {
+
+        max-width: 768px;
+
+        padding-right: 4rem;
+
+        padding-left: 4rem
+    }
+}
+
+@media (min-width: 1024px) {
+
+    section {
+
+        max-width: 1024px;
+
+        padding-right: 8rem;
+
+        padding-left: 8rem
+    }
+}
+
+@media (min-width: 1280px) {
+
+    section {
+
+        max-width: 1280px;
+
+        padding-right: 14rem;
+
+        padding-left: 14rem
+    }
+}
+
+@media (min-width: 1536px) {
+
+    section {
+
+        max-width: 1536px;
+
+        padding-right: 14rem;
+
+        padding-left: 14rem
+    }
+}
+
+section {
+
+    padding-top: 1rem;
+
+    padding-bottom: 1rem
+}
+
+section h1 {
+
+    text-align: center;
+
+    font-size: 1.875rem;
+
+    line-height: 2.25rem;
+
+    font-weight: 700
+}
+
+section h2 {
+
+    text-align: center;
+
+    font-size: 1.25rem;
+
+    line-height: 1.75rem;
+
+    font-weight: 600
+}
+
+section table {
+
+    border-collapse: collapse;
+
+    border-width: 1px
+}
+section table > thead {
+
+    --tw-bg-opacity: 1;
+
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+section table td, 
+section table th {
+
+    padding-top: 0.5rem;
+
+    padding-bottom: 0.5rem;
+
+    padding-left: 1rem;
+
+    padding-right: 1rem
+}
