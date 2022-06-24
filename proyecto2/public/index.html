@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cripto Precios</title>
-    <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="scripts/main.js"></script>
-  </head>
-  <body>
-    <h1>Hello there</h1>
-  </body>
+
+<head>
+  <title>Cripto Precios</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>Crypto prices</h1>
+    </header>
+  </section>
+  <section>
+    <header>
+      <h2>Query</h2>
+    </header>
+    <form>
+      <label for="baseAssetSelect">Base Asset:</label>
+      <select id="baseAssetSelect" name="baseAssetSelect">
+        <option value="-1">Select cryptocurrency</option>
+      </select>
+      <label for="quoteAssetSelect">Quote Asset:</label>
+      <select id="quoteAssetSelect" name="quoteAssetSelect">
+        <option value="-1">Select cryptocurrency</option>
+      </select>
+    </form>
+
+  </section>
+  <section>
+    <header>
+      <h2>Results</h2>
+    </header>
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>valor</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </section>
+</body>
 
 
 </html>
