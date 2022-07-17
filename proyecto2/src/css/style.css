@@ -1,5 +1,5 @@
 section{
-  @apply container pt-4 pb-4;
+  @apply container py-4;
 }
 
 section h1{
@@ -11,19 +11,40 @@ section h2{
   @apply text-center text-xl font-semibold;
 }
 
-section table{
-  @apply border-collapse border;
-}
-section table > thead{
-  @apply bg-gray-100;
+#priceGraph{
+  @apply w-full ;
 }
 
-section table td,
-section table th{
-  @apply pt-2 pb-2 pl-4 pr-4;
-  @apply border-collapse border;
+.form-picker{
+  @apply xsm:flex xsm:flex-col xsm:flex-nowrap;
+  @apply lg:flex lg:flex-row lg:justify-between xsm:flex-wrap ;
 }
 
-section a{
-  @apply text-blue-400 underline;
+.form-field{
+  @apply xsm:flex xsm:flex-col xsm:items-center;
+}
+.form-field > *{
+  @apply xsm:mx-auto xsm:my-1 xsm:px-1 xsm:py-0.5 xsm:flex-grow-0;
+  @apply md:mx-auto md:my-1 md:px-1 md:py-1 md:flex-grow-0;
+}
+.form-field > select{
+  @apply xsm:rounded-md xsm:w-64 xsm:text-center;
+  @apply md:rounded-md md:w-72   md:text-center;
+  @apply lg:rounded-md lg:w-60   lg:text-center;
+  @apply xl:rounded-md xl:w-80   xl:text-center;
+}
+
+#zoom-controler{
+  @apply lg:flex-grow;
+  @apply xl:flex-grow-0;
+  @apply 2xl:flex-grow;
+
+}
+#zoom-controler > input{
+  @apply xsm:w-64 xsm:text-center;
+  @apply md:w-72   md:text-center;
+  @apply lg:w-full   lg:text-center;
+  @apply xl:w-80   xl:text-center;
+  @apply 2xl:w-full   2xl:text-center;
+
 }

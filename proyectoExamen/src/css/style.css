@@ -1,0 +1,54 @@
+section{
+  @apply container;
+}
+header{
+  @apply w-full;
+}
+
+h1{
+  @apply text-5xl mb-4;
+}
+h2{
+  @apply text-3xl mb-2;
+}
+ul >li{
+  @apply mt-2 ;
+
+}
+.row{
+  /* small screen */
+  @apply sm:flex sm:flex-col lg:flex-row;
+}
+.col{
+  @apply sm:flex-grow sm:flex-shrink-0 ;
+  flex-basis: 0;
+}
+#recepiTitle{
+  @apply sm:text-center;
+}
+
+.links{
+  @apply sm:flex sm:flex-row sm:justify-evenly;
+}
+
+.links > *{
+  @apply sm:text-xl;
+}
+.times{
+  @apply sm:hidden lg:flex lg:flex-row lg:justify-evenly;
+}
+.times > .timeWrapper div:nth-child(1){
+  @apply border-2 border-black rounded-full w-40;
+  aspect-ratio: 1/1;
+  
+}
+
+#ingredients,
+#instructions
+{
+  @apply border-2 border-black rounded-lg mx-2 px-2 py-4;
+}
+
+.title2{
+  /* @apply border-b-1 border-blue-50; */
+}

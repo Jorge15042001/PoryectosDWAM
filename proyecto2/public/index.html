@@ -2,73 +2,71 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Cripto Precios</title>
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/graph.css">
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://techanjs.org/techan.min.js"></script>
+  <script src="scripts/data.js"></script>
+
+  <script defer src="scripts/graph.js"></script>
   <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
   <section>
     <header>
-      <h1>Crypto prices</h1>
+      <h1>Precios criptomonedas</h1>
     </header>
   </section>
   <section>
-    <header>
-      <h2>links apis</h2>
-    </header>
-    <table>
-      <thead>
-        <th>Endpoint</th>
-        <th>Documentation</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>https://api.binance.com/api/v3/ticker/24hr</td>
-          <td><a
-              href="https://binance-docs.github.io/apidocs/spot/en/#24hr-ticker-price-change-statistics">Documentaion</a>
-          </td>
-        </tr>
-        <tr>
-          <td>https://api.binance.com/api/v1/exchangeInfo</td>
-          <td><a href="https://binance-docs.github.io/apidocs/spot/en/#exchange-information">Documentaion</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section>
-    <header>
-      <h2>Query</h2>
-    </header>
-    <form>
-      <label for="baseAssetSelect">Base Asset:</label>
-      <select id="baseAssetSelect" name="baseAssetSelect">
-        <option value="-1">Select cryptocurrency</option>
-      </select>
-      <label for="quoteAssetSelect">Quote Asset:</label>
-      <select id="quoteAssetSelect" name="quoteAssetSelect">
-        <option value="-1">Select cryptocurrency</option>
-      </select>
+    <form class="form-picker">
+      <div class="form-field">
+        <label for="baseAssetSelect">Base Asset:</label>
+        <select id="baseAssetSelect" name="baseAssetSelect">
+          <option value="-1">Select cryptocurrency</option>
+        </select>
+
+      </div>
+      <div class="form-field">
+        <label for="quoteAssetSelect">Quote Asset:</label>
+        <select id="quoteAssetSelect" name="quoteAssetSelect">
+          <option value="-1">Select cryptocurrency</option>
+        </select>
+
+      </div>
+      <div class="form-field">
+        <label for="timeframe">Intervalo:</label>
+        <select id="timeframeSelect" name="timeframe">
+          <option value="1m">1 minunto</option>
+          <option value="5m">5 minustos</option>
+          <option value="15m">15 minuntos</option>
+          <option value="30m">30 minuntos</option>
+          <option value="1h">1 hora</option>
+          <option value="4h" selected>4 horas</option>
+          <option value="12h">12 horas</option>
+          <option value="1d">1 dia</option>
+          <option value="3d">3 dias</option>
+          <option value="1w">1 semana</option>
+        </select>
+
+      </div>
+      <div class="form-field" id="zoom-controler" >
+        <label for="zoom">Zoom:</label>
+        <input type="range" min="4" max="50" value="10" class="slider" id="zoom" name="zoom">
+
+      </div>
     </form>
 
   </section>
-  <section>
-    <header>
-      <h2>Results</h2>
-    </header>
-    <table id="resultsTable">
-      <thead>
-        <tr>
-          <th>Variable</th>
-          <th>valor</th>
-        </tr>
-      </thead>
-      <tbody>
+  <section id="priceGraphSection">
+    <main id="priceGraph">
 
-      </tbody>
-    </table>
-    <a id="viewOnBinanceLink" hidden>View on binance</a>
+    </main>
 
   </section>
 </body>

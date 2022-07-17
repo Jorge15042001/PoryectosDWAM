@@ -1,0 +1,33 @@
+
+text {
+    fill: #000;
+}
+@media (min-width: 369px) {
+    text {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+svg{
+  overflow: visible;
+}
+path.candle {
+    stroke: #000000;
+}
+path.candle.body {
+    stroke-width: 0;
+}
+path.candle.up {
+    fill: #00AA00;
+    stroke: #00AA00;
+}
+path.candle.down {
+    fill: #FF0000;
+    stroke: #FF0000;
+}

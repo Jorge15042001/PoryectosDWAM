@@ -2,72 +2,81 @@ const emptyOptionStrig = '<option value="-1">Select cryptocurrency</option>';
 
 const baseAssetSelect = document.getElementById('baseAssetSelect');
 const quoteAssetSelect = document.getElementById('quoteAssetSelect');
-const resultsTable = document.getElementById('resultsTable');
-const viewOnBinanceLink = document.getElementById('viewOnBinanceLink');
+const timeframeSelect = document.getElementById('timeframeSelect');
+const zoomSlider = document.getElementById('zoom');
 
+let ableToDraw = false;
+let globalPriceData =[];
+let numItems = zoomSlider.value;
 
 fetch('https://api.binance.com/api/v1/exchangeInfo')
-.then(res => res.json())
-.then(data =>{
-  
-  const assetsPairs = new Object();
+  .then(res => res.json())
+  .then(data => {
 
-  data.symbols.forEach(s=>{
-    if (assetsPairs[s.baseAsset]==null)assetsPairs[s.baseAsset]=[];
-    assetsPairs[s.baseAsset].push(s.quoteAsset);
-  });
-  Object.keys(assetsPairs).forEach(bAsset=>{
-    const option = document.createElement('option');
-    option.innerText = bAsset;
-    baseAssetSelect.appendChild(option);
-  })
-  baseAssetSelect.onchange= ()=>{
-    quoteAssetSelect.innerHTML = emptyOptionStrig;
+    const assetsPairs = new Object();
 
-    const selectedBaseAsset = baseAssetSelect.selectedOptions[0].innerText;
-    assetsPairs[selectedBaseAsset].forEach(qAsset=>{
+    console.log(data);
+    data.symbols.forEach(s => {
+      if (assetsPairs[s.baseAsset] == null) assetsPairs[s.baseAsset] = [];
+      assetsPairs[s.baseAsset].push(s.quoteAsset);
+    });
+    Object.keys(assetsPairs).forEach(bAsset => {
       const option = document.createElement('option');
-      option.innerText = qAsset;
-      quoteAssetSelect.appendChild(option);
+      option.innerText = bAsset;
+      baseAssetSelect.appendChild(option);
     })
-  }
+    baseAssetSelect.onchange = () => {
+      ableToDraw = false;
+      quoteAssetSelect.innerHTML = emptyOptionStrig;
+
+      const selectedBaseAsset = baseAssetSelect.selectedOptions[0].innerText;
+      assetsPairs[selectedBaseAsset].forEach(qAsset => {
+        const option = document.createElement('option');
+        option.innerText = qAsset;
+        quoteAssetSelect.appendChild(option);
+      })
+    }
 
 
-})
-.catch(err => console.error(err))
+  })
+  .catch(err => console.error(err))
 
 
-quoteAssetSelect.onchange = ()=>{
+quoteAssetSelect.onchange = () => {
+  ableToDraw = true;
   const baseAsset = baseAssetSelect.selectedOptions[0].innerText;
   const quoteAsset = quoteAssetSelect.selectedOptions[0].innerText;
+  const timeframe = timeframeSelect.selectedOptions[0].getAttribute("value")
 
-  fetch('https://api.binance.com/api/v3/ticker/24hr?symbol='+baseAsset+quoteAsset)
-  .then(res=>res.json())
-  .then(data => {
-    const tableBody = resultsTable.getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = "";
-  
-    const appendRow = (name,value)=>{
-      const varCol = document.createElement("td");
-      varCol.innerText = name;
-      const valueCol = document.createElement("td");
-      valueCol.innerText = value;
-      
-      const row = document.createElement('tr');
-      row.appendChild(varCol);
-      row.appendChild(valueCol);
+  fetch("https://api.binance.com/api/v3/klines?symbol=" + baseAsset + quoteAsset + "&interval="+timeframe+"&limit="+numItems)
+    .then(res => res.json())
+    .then(data => {
+      const parsedData = data.map(d => {
+        return {
+          date: new Date(d[0]),
+          open: parseFloat(d[1]),
+          high: parseFloat(d[2]),
+          low: parseFloat(d[3]),
+          close: parseFloat(d[4]),
+          volume: parseFloat(d[5])
+        }
+      });
+      parsedData.columns = ["Data", "Open", "High", "Low", "Close", "Volume"];
+      // parsedData.sort(function (a, b) {return d3.ascending(accessor.d(a), accessor.d(b));});
 
-      tableBody.appendChild(row);
+      globalPriceData=parsedData;
+      // console.log(parsedData);
+      draw(parsedData)
 
-    }
-    appendRow("Open price" ,data.prevClosePrice);
-    appendRow("Actaul price" ,data.lastPrice);
-    appendRow("Change" ,data.priceChange);
-    appendRow("Percentual change" ,data.priceChangePercent);
+    })
+    .catch(err => console.error(err))
+}
 
-    viewOnBinanceLink.setAttribute("href", "https://www.binance.com/en/trade/"+baseAsset+"_"+quoteAsset)
-    viewOnBinanceLink.hidden = false;
+timeframeSelect.onchange = ()=>{
+  if (ableToDraw) quoteAssetSelect.onchange();
+}
 
-  })
-  .catch(err=>console.error(err));
+zoomSlider.oninput = ()=>{
+  numItems = zoomSlider.value;
+  if (ableToDraw) quoteAssetSelect.onchange();
 }

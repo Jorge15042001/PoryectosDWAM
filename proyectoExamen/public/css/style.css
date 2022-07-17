@@ -1,0 +1,132 @@
+section{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 640px){
+  section{
+    max-width: 640px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 768px){
+  section{
+    max-width: 768px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 1024px){
+  section{
+    max-width: 1024px;
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
+@media (min-width: 1280px){
+  section{
+    max-width: 1280px;
+    padding-right: 14rem;
+    padding-left: 14rem;
+  }
+}
+@media (min-width: 1536px){
+  section{
+    max-width: 1536px;
+    padding-right: 14rem;
+    padding-left: 14rem;
+  }
+}
+header{
+  width: 100%;
+}
+
+h1{
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1;
+}
+h2{
+  margin-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+ul >li{
+  margin-top: 0.5rem;
+}
+.row{
+  /* small screen */
+}
+@media (min-width: 640px){
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px){
+  .row{
+    flex-direction: row;
+  }
+}
+@media (min-width: 640px){
+  .col{
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+}
+.col{
+  flex-basis: 0;
+}
+@media (min-width: 640px){
+  #recepiTitle{
+    text-align: center;
+  }
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .links > *{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .times{
+    display: none;
+  }
+}
+@media (min-width: 1024px){
+  .times{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.times > .timeWrapper div:nth-child(1){
+  width: 10rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  aspect-ratio: 1/1;
+}
+
+#ingredients, 
+#instructions{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title2{
+  /* @apply border-b-1 border-blue-50; */
+}
